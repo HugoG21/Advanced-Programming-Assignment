@@ -29,6 +29,15 @@ public class DateTime {
         return new DateTime(LocalDateTime.now());
     }
 
+    public static DateTime fromDateString(String dateString) {
+        try {
+            LocalDate date = LocalDate.parse(dateString, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+            return new DateTime(date.atStartOfDay());
+        } catch (Exception e) {
+            return new DateTime();
+        }
+    }
+
     public String format() {
         return dateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
     }
