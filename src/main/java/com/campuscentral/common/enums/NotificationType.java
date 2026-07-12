@@ -1,0 +1,13 @@
+package com.campuscentral.common.enums;
+
+public enum NotificationType {
+    BOOKING_CONFIRMATION,
+    BOOKING_REMINDER,
+    BOOKING_CANCELLATION,
+    BOOKING_RESCHEDULED,
+    SYSTEM_ANNOUNCEMENT,
+    FACILITY_UPDATE,
+    POLICY_CHANGE,
+    ACCOUNT_UPDATE,
+    GENERAL
+}
